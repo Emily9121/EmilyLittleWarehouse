@@ -6,6 +6,8 @@ Copyleft 2021 - Emily Lovelace
 
 Emily's Little Warehouse is a Snipe-IT client for Windows Mobile 6+ - It was made to re-use a Motorola/Zebra/Symbol MC65 barcode reader that is available for very cheap online.
 
+Because I'm one lazy girl, most likely only VGA devices will work properly, especially for label generation.
+
 ## Features
 
 The client was made to, well, to my needs, so basically only thing that has been implemented was what I needed
