@@ -2,11 +2,11 @@
 
 Copyleft 2021 - Emily Lovelace
 
-== What? ==
+## What?
 
-Emily's Little Warehouse is a Snipe-IT client for Windows Mobile 6+ - It was made to re-use a Motorola/Zebra/Symbol MC65 reader that is available for very cheap online.
+Emily's Little Warehouse is a Snipe-IT client for Windows Mobile 6+ - It was made to re-use a Motorola/Zebra/Symbol MC65 barcode reader that is available for very cheap online.
 
-== Features ==
+## Features
 
 The client was made to, well, to my needs, so basically only thing that has been implemented was what I needed
 
@@ -27,7 +27,7 @@ With the existing code, the only compatible printer is a cat printer (GB01), and
 
 If you want to try it, you will need to modify https://gist.github.com/xssfox/b911e0781a763d258d21262c5fdd2dec to open access to the webserver to the local network and to setup the IP address of the device running that script in the configuration.
 
-== Configuration ==
+## Configuration
 
 Unfortunately I couldn't finish the configuration UI, so, for now (and probably forever, I doubt there will be many updates), you need to edit the App.config file with a text editor.
 
