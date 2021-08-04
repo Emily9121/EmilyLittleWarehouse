@@ -1,6 +1,4 @@
-# EmilyLittleWarehouse
-
-Emily's Little Warehouse Version 1.0
+# Emily's Little Warehouse Version 1.0
 
 Copyleft 2021 - Emily Lovelace
 
