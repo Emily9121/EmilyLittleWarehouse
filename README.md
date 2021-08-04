@@ -52,7 +52,7 @@ AutofillAddress: TRUE or FALSE - Enable the address autofill feature for new loc
 
 ModelID : The Model ID used for new items
 
-LICENSE:
+## LICENSES
 
 Emily's Little Warehouse use the library Newtonsoft.Json.Net.Compact under the MIT License.
 Emily's Little Warehouse use the library ZXing.Net under Apache License 2.0.
