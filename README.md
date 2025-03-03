@@ -1,6 +1,11 @@
-# Emily's Little Warehouse Version 1.0
+# Emily's Little Warehouse Version 1.0.1
 
-Copyleft 2021 - Emily Lovelace
+Copyleft 2021-2025 - Emily Lovelace
+
+## Change in 1.0.1
+
+Bigger QR Code on Stickers generation page
+Added a "Send to Bluetooth" button for Stickers.
 
 ## What?
 
