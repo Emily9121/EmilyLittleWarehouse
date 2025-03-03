@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Net;
+using System.Diagnostics;
 
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
@@ -43,9 +44,18 @@ namespace MC65SnipeIT
             if (MobileConfiguration.Settings["NyaPrint"] == "TRUE")
             {
                 PrintBtn.Visible = true;
+                BTSendBtn.Visible = false;
                 SaveBtn.Location = new System.Drawing.Point(169, 540);
                 this.ExitBtn.Location = new System.Drawing.Point(16, 540);
             }
+            if (MobileConfiguration.Settings["BTSend"] == "TRUE")
+            {
+                PrintBtn.Visible = false;
+                BTSendBtn.Visible = true;
+                SaveBtn.Location = new System.Drawing.Point(169, 540);
+                this.ExitBtn.Location = new System.Drawing.Point(16, 540);
+            }
+
             else
             {
                 //change nothing
@@ -115,6 +125,13 @@ namespace MC65SnipeIT
                 PrintBtn.Enabled = true;
                 SaveBtn.Enabled = true;
             }
+
+            if (MobileConfiguration.Settings["BTSend"] == "TRUE")
+            {
+                SaveBtn.Enabled = true;
+                BTSendBtn.Enabled = true;
+            }
+
             else
             {
                 SaveBtn.Enabled = true;
@@ -347,6 +364,42 @@ namespace MC65SnipeIT
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BTSendBtn_Click(object sender, EventArgs e)
+        {
+            // screenshot
+
+            try
+            {
+                string filename = "\\" + MobileConfiguration.Settings["Storage"] + "\\ELW-Labels\\" + textBox1.Text + "-label.jpg";
+                if (File.Exists(filename))
+                {
+                    File.Delete(filename);
+                }
+                Rectangle bounds = panel1.Bounds;
+                IntPtr hdc = GetDC(IntPtr.Zero);
+                Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height, PixelFormat.Format16bppRgb565);
+                using (Graphics graphics = Graphics.FromImage(bitmap))
+                {
+                    IntPtr dstHdc = graphics.GetHdc();
+                    BitBlt(dstHdc, 0, 0, bounds.Width, bounds.Height, hdc, 36, 98,
+                    RasterOperation.SRC_COPY);
+                    graphics.ReleaseHdc(dstHdc);
+                }
+                bitmap.Save(filename, ImageFormat.Jpeg);
+                ReleaseDC(IntPtr.Zero, hdc);
+
+                // Send to BT
+
+
+                Process.Start("\\Windows\\beam.exe", filename);
+            }
+            catch (Exception) { MessageBox.Show("Error"); }
+
+            textBox1.Focus();
+            textBox1.SelectionStart = 0;
+            textBox1.SelectionLength = textBox1.Text.Length;
         }
     }
 }

@@ -40,6 +40,7 @@
             this.ExitBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.KeyStatusInfo = new System.Windows.Forms.Label();
+            this.BTSendBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // AssetText
             // 
             this.AssetText.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
-            this.AssetText.Location = new System.Drawing.Point(3, 411);
+            this.AssetText.Location = new System.Drawing.Point(6, 443);
             this.AssetText.Name = "AssetText";
             this.AssetText.Size = new System.Drawing.Size(398, 21);
             this.AssetText.Text = "Asset";
@@ -72,7 +73,7 @@
             // LocationText
             // 
             this.LocationText.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Bold);
-            this.LocationText.Location = new System.Drawing.Point(3, 390);
+            this.LocationText.Location = new System.Drawing.Point(6, 422);
             this.LocationText.Name = "LocationText";
             this.LocationText.Size = new System.Drawing.Size(398, 21);
             this.LocationText.Text = "Location";
@@ -81,17 +82,17 @@
             // NameText
             // 
             this.NameText.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.NameText.Location = new System.Drawing.Point(3, 297);
+            this.NameText.Location = new System.Drawing.Point(6, 321);
             this.NameText.Name = "NameText";
-            this.NameText.Size = new System.Drawing.Size(398, 93);
+            this.NameText.Size = new System.Drawing.Size(398, 101);
             this.NameText.Text = "Name of the Item";
             this.NameText.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // picBarcode
             // 
-            this.picBarcode.Location = new System.Drawing.Point(49, 2);
+            this.picBarcode.Location = new System.Drawing.Point(-25, -65);
             this.picBarcode.Name = "picBarcode";
-            this.picBarcode.Size = new System.Drawing.Size(309, 309);
+            this.picBarcode.Size = new System.Drawing.Size(450, 450);
             this.picBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // textBox1
@@ -152,12 +153,25 @@
             this.KeyStatusInfo.Text = "Keyboard Shortcuts Disabled! - Use the keypad for data entry!";
             this.KeyStatusInfo.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // BTSendBtn
+            // 
+            this.BTSendBtn.Enabled = false;
+            this.BTSendBtn.Location = new System.Drawing.Point(319, 540);
+            this.BTSendBtn.Name = "BTSendBtn";
+            this.BTSendBtn.Size = new System.Drawing.Size(144, 30);
+            this.BTSendBtn.TabIndex = 10;
+            this.BTSendBtn.TabStop = false;
+            this.BTSendBtn.Text = "Send to BT";
+            this.BTSendBtn.Visible = false;
+            this.BTSendBtn.Click += new System.EventHandler(this.BTSendBtn_Click);
+            // 
             // Sticker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
             this.ClientSize = new System.Drawing.Size(480, 588);
+            this.Controls.Add(this.BTSendBtn);
             this.Controls.Add(this.KeyStatusInfo);
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.ExitBtn);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.Label KeyStatusInfo;
+        private System.Windows.Forms.Button BTSendBtn;
     }
 }

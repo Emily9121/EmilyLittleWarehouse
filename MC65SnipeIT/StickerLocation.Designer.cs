@@ -38,6 +38,7 @@
             this.picBarcode = new System.Windows.Forms.PictureBox();
             this.NameText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTSendBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,15 +108,15 @@
             // 
             // picBarcode
             // 
-            this.picBarcode.Location = new System.Drawing.Point(53, 9);
+            this.picBarcode.Location = new System.Drawing.Point(-25, -65);
             this.picBarcode.Name = "picBarcode";
-            this.picBarcode.Size = new System.Drawing.Size(309, 309);
+            this.picBarcode.Size = new System.Drawing.Size(450, 450);
             this.picBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // NameText
             // 
             this.NameText.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.NameText.Location = new System.Drawing.Point(7, 304);
+            this.NameText.Location = new System.Drawing.Point(7, 321);
             this.NameText.Name = "NameText";
             this.NameText.Size = new System.Drawing.Size(398, 38);
             this.NameText.Text = "Name of the Location";
@@ -130,12 +131,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 472);
             // 
+            // BTSendBtn
+            // 
+            this.BTSendBtn.Enabled = false;
+            this.BTSendBtn.Location = new System.Drawing.Point(319, 540);
+            this.BTSendBtn.Name = "BTSendBtn";
+            this.BTSendBtn.Size = new System.Drawing.Size(144, 30);
+            this.BTSendBtn.TabIndex = 19;
+            this.BTSendBtn.TabStop = false;
+            this.BTSendBtn.Text = "Send to BT";
+            this.BTSendBtn.Visible = false;
+            this.BTSendBtn.Click += new System.EventHandler(this.BTSendBtn_Click);
+            // 
             // StickerLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(187)))), ((int)(((byte)(213)))));
             this.ClientSize = new System.Drawing.Size(480, 588);
+            this.Controls.Add(this.BTSendBtn);
             this.Controls.Add(this.locationBox);
             this.Controls.Add(this.KeyStatusInfo);
             this.Controls.Add(this.PrintBtn);
@@ -163,6 +177,7 @@
         private System.Windows.Forms.PictureBox picBarcode;
         private System.Windows.Forms.Label NameText;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button BTSendBtn;
 
     }
 }
