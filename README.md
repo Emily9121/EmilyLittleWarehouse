@@ -8,6 +8,8 @@ Bigger QR Code on Stickers generation page
 
 Added a "Send to Bluetooth" button for Stickers.
 
+Added a quick AI-generated port of the app for Python for quick testing [DO NOT USE IN PRODUCTION!!!]
+
 ## What?
 
 Emily's Little Warehouse is a Snipe-IT client for Windows Mobile 6+ - It was made to re-use a Motorola/Zebra/Symbol MC65 barcode reader that is available for very cheap online.
